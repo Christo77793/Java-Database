@@ -182,7 +182,7 @@ public class edit extends javax.swing.JFrame {
         try {
             
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-            conn = DriverManager.getConnection("jdbc:ucanaccess://C://Users//Christina AJ//Desktop//Java//Database2.accdb");
+            conn = DriverManager.getConnection("jdbc:ucanaccess://*<location of the database file created using MS Access>*");
             pst = conn.prepareStatement("select * from Employee_Details");
             rs = pst.executeQuery();
             
@@ -223,7 +223,7 @@ public class edit extends javax.swing.JFrame {
         if(dialogresult == JOptionPane.YES_NO_OPTION){
             try {
                 Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-                conn = DriverManager.getConnection("jdbc:ucanaccess://C://Users//Christina AJ//Desktop//Java//Database2.accdb");
+                conn = DriverManager.getConnection("jdbc:ucanaccess://*<location of the database file created using MS Access>*");
                 
                 String sql = "delete from Employee_Details where id = ?";
 
@@ -263,7 +263,7 @@ public class edit extends javax.swing.JFrame {
         try {
                         
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-            conn = DriverManager.getConnection("jdbc:ucanaccess://C://Users//Christina AJ//Desktop//Java//Database2.accdb");
+            conn = DriverManager.getConnection("jdbc:ucanaccess://*<location of the database file created using MS Access>*");
             
             String sql = "update Employee_Details set Emp_Name = ?, Emp_Position = ?, Emp_Salary = ? where id = ?";
             
