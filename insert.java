@@ -177,7 +177,7 @@ public class insert extends javax.swing.JFrame {
         try {
             
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-            conn = DriverManager.getConnection("jdbc:ucanaccess://C://Users//Christina AJ//Desktop//Java//Database2.accdb");
+            conn = DriverManager.getConnection("jdbc:ucanaccess://*<location of the database file created using MS Access>*");
             pst = conn.prepareStatement("select * from Employee_Details");
             rs = pst.executeQuery();
             
@@ -224,7 +224,7 @@ public class insert extends javax.swing.JFrame {
         try {
                         
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-            conn = DriverManager.getConnection("jdbc:ucanaccess://C://Users//Christina AJ//Desktop//Java//Database2.accdb");
+            conn = DriverManager.getConnection("jdbc:ucanaccess://*<location of the database file created using MS Access>*");
             
             String sql = "insert into Employee_Details(Emp_Name, Emp_Position, Emp_Salary) values(?,?,?)";
             
